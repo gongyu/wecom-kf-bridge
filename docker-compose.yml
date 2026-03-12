@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  wecom-kf-bridge:
+    build: .
+    container_name: wecom-kf-bridge
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - WECOM_CORP_ID=${WECOM_CORP_ID}
+      - WECOM_KF_SECRET=${WECOM_KF_SECRET}
+      - WECOM_TOKEN=${WECOM_TOKEN}
+      - WECOM_ENCODING_AES_KEY=${WECOM_ENCODING_AES_KEY}
+      - OPENCLAW_GATEWAY_URL=${OPENCLAW_GATEWAY_URL:-http://host.docker.internal:18789}
+      - OPENCLAW_GATEWAY_TOKEN=${OPENCLAW_GATEWAY_TOKEN}
+      - AGENT_ID=${AGENT_ID:-servers}
+      - PORT=3000
+    networks:
+      - wecom-bridge
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  wecom-bridge:
+    driver: bridge

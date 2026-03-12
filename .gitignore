@@ -1,0 +1,31 @@
+# 依赖
+node_modules/
+package-lock.json
+
+# 配置文件（包含敏感信息）
+config.conf
+.env
+
+# 部署包和备份
+*.tar.gz
+*.backup
+*.backup.*
+
+# 日志
+*.log
+logs/
+
+# PM2
+.pm2/
+
+# 测试和临时文件
+test-*.sh
+*.tmp
+*.temp
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

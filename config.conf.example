@@ -1,0 +1,25 @@
+{
+  "wecom": {
+    "corpId": "",
+    "kfSecret": "",
+    "token": "",
+    "encodingAESKey": ""
+  },
+  "openclaw": {
+    "gatewayUrl": "http://localhost:18789",
+    "gatewayToken": "",
+    "agentId": "service"
+  },
+  "server": {
+    "port": 3000
+  },
+  "welcome": {
+    "enabled": true,
+    "message": "您好呀，我是小晓 🚂🚢 看您对旅游感兴趣～ 我们主要做专为中老年人设计的轻松线路。您这次想去那里啊？",
+    "clearInterval": 86400000
+  },
+  "dedup": {
+    "maxSize": 1000,
+    "clearInterval": 3600000
+  }
+}

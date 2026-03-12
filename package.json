@@ -1,0 +1,17 @@
+{
+  "name": "wecom-kf-bridge",
+  "version": "1.0.0",
+  "description": "企业微信客服消息中转服务 - 转发到 OpenClaw",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "crypto": "^1.0.1",
+    "xml2js": "^0.6.2",
+    "axios": "^1.6.2"
+  }
+}
