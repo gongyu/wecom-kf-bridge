@@ -228,6 +228,35 @@ docker run -d \
 docker-compose up -d
 ```
 
+## 🛠️ 客服管理工具
+
+项目包含一个命令行工具 `kf-manager.js`，用于管理企业微信客服账号。
+
+### 功能
+
+- 📝 列出所有客服账号
+- 🖼️ 更新客服头像
+- ✏️ 更新客服名字
+- 🔄 同时更新头像和名字
+
+### 快速使用
+
+```bash
+# 列出所有客服
+node kf-manager.js list
+
+# 更新头像
+node kf-manager.js update-avatar "客服达达" /path/to/avatar.jpg
+
+# 更新名字
+node kf-manager.js update-name "客服达达" "客服小晓"
+
+# 同时更新
+node kf-manager.js update "客服达达" "客服小晓" /path/to/avatar.jpg
+```
+
+详细使用说明请查看 [客服管理工具指南](KF_MANAGER_GUIDE.md)
+
 ## 🔍 API 接口
 
 ### 健康检查
